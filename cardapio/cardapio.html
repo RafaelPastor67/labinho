@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardapio</title>
+    <link rel="stylesheet" href="cardapio-style.css">
+    <link rel="stylesheet" href="cardapio-mobile.css">
+    <link rel="icon" href="/imagens/labinho-favcon.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script defer src="cardapio.js"></script>
+</head>
+<body>
+    <div class="background1">
+        <div class="borro">
+            <header>
+                <div class="barra-links" id="seçao1">
+                    <button class="btn-icon-header" id = "sidebar">
+                        <i id="sidebar-button" class='bx bx-menu'></i>
+                    </button>
+                    
+                    <a href="/login/login.html" class="btn-icon-header" id="icone-login">
+                        <i class='bx bx-user' ></i>
+                    </a>
+                </div>
+    
+                <div class="sidebar-hidden">
+                    <div class="element-sidebar"><a href="/menu/menu.html"><i class='bx bxs-home' ></i> Home</a> </div>
+                    <div class="element-sidebar"><a href="/login/login.html"><i class='bx bx-user' ></i> Login</a></div>
+                    <div class="element-sidebar"><a href="/cardapio/cardapio.html"><i class='bx bxs-food-menu'></i> Cardapio</a></div>
+                    <div class="element-sidebar"><a href="/eventos/eventos.html"><i class='bx bxs-party' ></i>Eventos</a></div>
+                    <div class="element-sidebar"><a href="/menu/menu.html#contato"><i class='bx bxs-phone-call'></i> Contatos</a></div>
+                </div>
+                <section class="center-content">
+                    <div class="banner">
+                        <div class="image"><img class="logo-banner" src="/imagens/labinho-ico-nobackground.png" alt="logo La-Binho" id="menu"> 
+                        <h2>Cardapio</h2>
+                    </div>
+                </section>
+            </header>
+        </div>
+    </div>
+
+    <main>
+        <!-- banner -->
+        <div class="background2">
+            <div class="aba-cardapio">
+                    <button class="collapsible"><h2>Individuais</h2></button>
+                <div class="content">
+                    <div class="boxes">
+                        <div class="box1">
+                            <div class = "text">
+                                <div>
+                                <h3 class="prato">Filé a parmegiana</h3>
+                                <p class="comment">Filé Mignon empanado, purê de batata, molho de tomate,mussarela e arroz</p>
+                                </div>
+                            
+                                <h3 class="price">R$40,00</h3>
+                            </div>
+                            <div class="imagem"><img src="/imagens/Imagens cardapio/parmegiana.jpg" alt="prato" id=""></div>
+                        </div>
+                        <div class="box2">
+                            <div class = "text">
+                                <div>
+                                    <h3 class="prato">Filé a francesa</h3>
+                                    <p class="comment">Filé Mingnon, guarnição à Francesa, Cebola Dorê e arroz </p>
+                                </div>
+                            
+                                <h3 class="price">R$56,00</h3>
+                            </div>
+                            <div class="imagem"><img src="/imagens/Imagens cardapio/file-francesa.jpg" alt="prato" id=""></div>
+                        </div>
+                    </div>
+                
+                
+                    <div class="boxes">
+                        <div class="box1">
+                            <div class = "text">
+                                <div>
+                                <h3 class="prato">Filé a Piamontesa</h3>
+                                <p class="comment">
+                                    Filé mignon, batata frita e arroz a piamontesa  </p>
+                                </div>
+                            
+                                <h3 class="price">R$56,00</h3>
+                            </div>
+                            <div class="imagem"><img src="/imagens/Imagens cardapio/file-piamontesa.jpg" alt="prato" id=""></div>
+                        </div>
+                        <div class="box2">
+                            <div class = "text">
+                                <div>
+                                    <h3 class="prato">Medalhão</h3>
+                                    <p class="comment">Filé mignon, bâcon, arroz e batata frita </p>
+                                </div>
+                            
+                                <h3 class="price">R$56,00</h3>
+                            </div>
+                            <div class="imagem"><img src="/imagens/Imagens cardapio/Medalhão7.JPG" alt="prato" id=""></div>
+                        </div>
+                    </div>
+                    
+                    <div class="boxes">
+                        <div class="box1">
+                            <div class = "text">
+                                <div>
+                                <h3 class="prato">Tornêdor</h3>
+                                <p class="comment">
+                                    Bife alto, batata frita, molho madeira e arroz  </p>
+                                </div>
+                            
+                                <h3 class="price">R$61,00</h3>
+                            </div>
+                            <div class="imagem"><img src="/imagens/Imagens cardapio/tornedor.png" alt="prato" id=""></div>
+                        </div>
+                        <div class="box2">
+                            <div class = "text">
+                                <div>
+                                    <h3 class="prato">Frango ao Requeijao</h3>
+                                    <p class="comment">Frango ao requeijao,batata palha e arroz </p>
+                                </div>
+                            
+                                <h3 class="price">R$68,00</h3>
+                            </div>
+                            <div class="imagem"><img src="/imagens/Imagens cardapio/Frango-ao-Requeijão.JPG" alt="prato" id=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="aba-cardapio">
+                    <button class="collapsible"><h2>Porções</h2></button>
+                <div class="content">
+                    <div class="boxes">
+                        <div class="box1">
+                            <div class = "text">
+                                <div>
+                                <h3 class="prato">Batata Frita</h3>
+                                <p class="comment">150g (meia) - 300g (inteira)</p>
+                                </div>
+                            
+                                <h3 class="price">R$20,00 - R$30,00</h3>
+                            </div>
+                            <div class="imagem"><img src="/imagens/Imagens cardapio/batata.jpg" alt="prato" id=""></div>
+                        </div>
+                        <div class="box2">
+                            <div class = "text">
+                                <div>
+                                    <h3 class="prato">File a Palito</h3>
+                                    <p class="comment">Filé 250g (meia) - 500 grama de Filé mignon em cubos grelhado na cebola ao molho madeira
+                                    </p>
+                                </div>
+                            
+                                <h3 class="price">R$44,00 a R$59,00</h3>
+                            </div>
+                            <div class="imagem"><img src="/imagens/Imagens cardapio/file-palito.JPG" alt="prato" id=""></div>
+                        </div>
+                    </div>
+                
+                
+                    <div class="boxes">
+                        <div class="box1">
+                            <div class = "text">
+                                <div>
+                                <h3 class="prato">Filé de Peixe</h3>
+                                <p class="comment">125g de aruanã(meia) -250g de aruanã(inteira) </p>
+                                </div>
+                            
+                                <h3 class="price">R$39,00 a 49,00</h3>
+                            </div>
+                            <div class="imagem"><img src="/imagens/Imagens cardapio/file-de-peixe.JPG" alt="prato" id=""></div>
+                        </div>
+                        <div class="box2">
+                            <div class = "text">
+                                <div>
+                                    <h3 class="prato">Frango Romano</h3>
+                                    <p class="comment">6 unidadades(meia) - 12 unidades (inteira) bolinhos de frango com requeijao</p>
+                                </div>
+                            
+                                <h3 class="price">R$20,00 a 30,00</h3>
+                            </div>
+                            <div class="imagem"><img src="/imagens/Imagens cardapio/romano.JPG" alt="prato" id=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aba-cardapio">
+                <button class="collapsible"><h2>Bebidas</h2></button>
+            <div class="content">
+                <div class="boxes">
+                    <div class="box1">
+                        <div class = "text">
+                            <div>
+                            <h3 class="prato">Lagoa Azul</h3>
+                            <p class="comment">Vodka, Curaçau Blue, Soda, Limão expremido</p>
+                            </div>
+                        
+                            <h3 class="price">R$20,00</h3>
+                        </div>
+                        <div class="imagem"><img src="/imagens/Imagens cardapio/lagoa-azul.JPG" alt="prato" id=""></div>
+                    </div>
+                    <div class="box2">
+                        <div class = "text">
+                            <div>
+                                <h3 class="prato">Cuba Libre</h3>
+                                <p class="comment">Bacardi, limão picado e completar com coca-cola</p>
+                            </div>
+                        
+                            <h3 class="price">R$16,00</h3>
+                        </div>
+                        <div class="imagem"><img src="/imagens/Imagens cardapio/cuba-libre.jpg" alt="prato" id=""></div>
+                    </div>
+                </div>
+            
+            
+                <div class="boxes">
+                    <div class="box1">
+                        <div class = "text">
+                            <div>
+                            <h3 class="prato">Pina Colada</h3>
+                            <p class="comment">
+                                Abacaxi, Leite, Rum, Leite côco, açucar e chocolate no enfeite</p>
+                            </div>
+                        
+                            <h3 class="price">R$20,00</h3>
+                        </div>
+                        <div class="imagem"><img src="/imagens/Imagens cardapio/pina-colada.jpg" alt="prato" id=""></div>
+                    </div>
+                    <div class="box2">
+                        <div class = "text">
+                            <div>
+                                <h3 class="prato">Sex on the Beach</h3>
+                                <p class="comment">Licor de Pêssego, suco de laranja e Cranberry</p>
+                            </div>
+                        
+                            <h3 class="price">R$20,00</h3>
+                        </div>
+                        <div class="imagem"><img src="/imagens/Imagens cardapio/sex-on-the-beach.JPG" alt="prato" id=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        </div>
+    </main>
+    <footer>
+        <div class="flexfoot">
+            <div class="links">
+                <div class="social">
+                    <h3 style="text-align: center;">Links</h3>
+                    <div class="flex-social">
+                        <a href="https://www.instagram.com/la.binho/"><button class="btn-footer"><img class="midias"src="/imagens/instagram-ico.png" width="40px" alt=""></button></a>
+                        <a href="https://api.whatsapp.com/send?phone=553138343668"><button class="btn-footer"><img class="midias" src="/imagens/zap-ico.png" width="40px" alt=""></button></a>
+                        <a href="https://www.facebook.com/la.binho.1/?locale=pt_BR"><button class="btn-footer"><img class="midias" src="/imagens/facebook-ico.png" width="40px" alt=""></button></a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="navegacao">
+                <h3>Navegação</h3>
+                <a href="/menu/menu.html">Menu</a>
+                <a href="/menu/menu.html#salao">Sobre</a>
+                <a href="/menu/menu.html#contato">Contatos</a>
+            </div>
+            <div class="developed">
+                <h3>Developed</h3>
+                <p>Rafael Pastor#PD009</p>
+                <p>Joao Vitor Moreira#PD079</p>
+            </div>
+        </div>    
+        <div class="copyright"><p>© 2024 All rights reserved</p></div>
+        
+    </footer>
+</body>
+</html>

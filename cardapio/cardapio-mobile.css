@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+    .boxes{
+        display: flex;
+        flex-direction: column;
+    }
+    #icone-login{
+        display: none;
+    }
+    .flexfoot{
+        flex-direction: column;
+    }
+}

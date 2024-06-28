@@ -1,0 +1,57 @@
+@media (max-width: 768px) {
+    .foto,.foto-reverse{
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+    }
+    .foto-reverse p, .texto{
+        margin-right: 1.5em;
+        margin-left: 1.5em;
+    }
+    .texto{
+        text-align: left;
+    }
+    main{
+        padding: 10%;
+    }
+    .e1{
+        width: 100%;
+    }
+    .contato{
+        flex-direction: column;
+    }
+    .endereco-funcionamento{
+        flex-direction: column;
+        
+    }
+    .endereco{
+        padding-right: 0px;
+        border-right: 0px;
+        text-align: center;
+    }
+    #icon-login, #logo-binho-top{
+        display: none;
+    }
+    .sidebar-shown {
+        width: 100%;
+        z-index: 1;
+}
+    .sidebar-hidden {
+        width: 100%;
+        left: 0;
+}
+    .flexfoot{
+        flex-direction: column;
+    }
+    .colecao{
+        flex-direction: column;
+        align-items: center;
+    }
+    .colecao img{
+        width: 80%;
+    }
+    #center-content{
+        width: 100vw;
+        display: none;
+    }
+}
