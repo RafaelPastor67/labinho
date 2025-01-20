@@ -32,14 +32,24 @@
     #icon-login, #logo-binho-top{
         display: none;
     }
+    .sidebar-hidden {
+        transform: translateX(-100%); /* Oculta a sidebar, empurrando-a para fora */
+        transition: transform 0.3s ease; /* Animação suave */
+        width: 100%;
+    }
+      
     .sidebar-shown {
+        transform: translateX(0); /* Torna a sidebar visível */
         width: 100%;
         z-index: 1;
-}
-    .sidebar-hidden {
-        width: 100%;
-        left: 0;
-}
+        background-color: black;
+        opacity: 0.8;
+    }
+
+    .element-sidebar a{
+        color: white;
+    }
+
     .flexfoot{
         flex-direction: column;
     }
@@ -54,4 +64,34 @@
         width: 100vw;
         display: none;
     }
+
+
+  /*Ajuste no alinhamento de Informações de Contato*/
+  .contato {
+    flex-direction: column;
+    padding: 2%; /* Ajuste de espaçamento geral */
+}
+
+.endereco-funcionamento {
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+}
+
+.endereco {
+    padding-right: 0;
+    border-right: 0;
+    text-align: left; /* Remove a centralização */
+}
+
+.horario {
+    padding-left: 0;
+    text-align: left; /* Remove a centralização */
+}
+
+.telefonebox {
+    text-align: left; /* Garante alinhamento ao lado esquerdo */
+}
+#some{
+    display: block;
+}
 }
