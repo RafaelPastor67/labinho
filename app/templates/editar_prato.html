@@ -1,0 +1,48 @@
+<head>
+    <title> {{ title }} </title>
+</head>
+
+<div style="background-color:black">
+    {% include "base.html" %}
+</div>
+
+{% block content %}
+
+<section class="registro" >
+    <div class="wrapper">
+
+        <h1> Cadastro de prato </h1>
+
+        <form action="" method="post">
+            <div class="input-box">
+                <label for="nome">Prato:</label>
+                <input type="text" name="nome" value="{{ nome|escape }}" required>
+            </div>
+            <div class="input-box">
+                <label for="tipo">Tipo:</label>
+                <input type="text" name="tipo" value={{tipo}} required>
+            </div>
+            <div class="input-box">
+                <label for="valor">Valor:</label>
+                <input type="int" name="valor"  value={{valor}} required>
+            </div>
+            <div class="input-box">
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" name="descricao" value="{{ descricao|escape }}" required>
+            </div>
+            <div class="input-box">
+                <label for="imagem">Imagem:</label>
+                <input type="text" name="imagem" value={{imagem}} required>
+            </div>
+            <div class="input-box">
+                <label for="senha">Senha do administrador:</label>
+                <input type="password" name="senha" required>
+            </div>
+            <div class="input-box">
+                <button type="submit">Editar</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+{% endblock %}

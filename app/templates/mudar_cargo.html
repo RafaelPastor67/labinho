@@ -1,0 +1,32 @@
+<div style="background-color:black">
+    {% include "base.html" %}
+</div>
+
+
+{% block content %}
+
+<section class="registro" >
+    <div class="wrapper">    
+    
+    <h1> Alterar cargo </h1>
+
+    <form action="" method="post">
+        <div class="input-box">
+            <label for="nome">Usuário:</label>
+            <input type="text" name="nome" required>
+        </div>
+        <div class="input-box">
+            <label for="cargo">Novo cargo:</label>
+            <input type="text" name="cargo" required>
+        </div>
+        <div class="input-box">
+            <label for="senha">Senha do administrador:</label>
+            <input type="password" name="senha" required>
+        </div>
+        <div class="input-box">
+            <button type="submit">Alterar</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

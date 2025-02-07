@@ -1,0 +1,39 @@
+<head>     
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pratos.css') }}">
+</head>
+
+<div class="prato-imagem">
+    <img src="{{ url_for('static', filename='imagens/Imagens cardapio/' + prato.imagem.lower()) }}" width="150px">
+</div>
+
+<div class="info">
+    <h3 class="prato"> {{prato.nome}} </h3> 
+    <p class="comment"> {{prato.descricao}}</p>
+    <div class="preco-botao">
+        <h3 class="price"> Valor: R${{prato.valor}}</h3>
+        <section class="buttons">
+            {% if user.cargo == 'Gerente' or user.cargo == 'Funcionário'%}
+            <div style="display:flex; flex-direction: row">
+                <form action="{{ url_for('editarPrato', id=prato.id) }}" method="POST">
+                    <button type="submit"><i class='bx bxs-pencil'></i>Editar</button>
+                </form>
+                <form action="{{ url_for('excluirPrato', id=prato.id) }}" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir este prato?');">
+                    <button type="submit"  id="excluir"><i class='bx bxs-trash'></i>Excluir</button>
+                </form>
+            </div>    
+            {% endif %}
+            {% if user.cargo == 'Cliente'%}
+                <form action="{{ url_for('adicionarPrato', id=prato.id) }}" method="POST">
+                    <div>
+                        <button type="submit" class="btn-comprar"><i class='bx bxs-cart'></i>Comprar</button>
+                    </div>
+                </form>
+            {% endif %}
+        </section>
+    </div>
+
+
+
+
+    
+</div>

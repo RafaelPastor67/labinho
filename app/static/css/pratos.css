@@ -1,0 +1,72 @@
+/*configuraçao do conteudo*/
+
+.text p {
+  padding: 0;
+}
+
+.info {
+  margin-left: 20px;
+  align-items: center;
+  height: 108px;
+  width: 400px;
+}
+
+#Individuais .prato-imagem img {
+  height: 120px;
+  width: 160px;
+  border-radius: 5px;
+}
+
+#Porção .prato-imagem img {
+  height: 120px;
+  width: 160px;
+  border-radius: 5px;
+}
+
+#Bebida .prato-imagem img {
+  height: 160px;
+  width: 120px;
+  border-radius: 5px;
+}
+
+.buttons button {
+  cursor: pointer;
+  border-radius: 30px;
+  width: auto;
+  padding: 5px;
+  font-size: 12px;
+  border: none;
+  border: 1px #360202 solid;
+  margin-left: 60px;
+}
+
+#excluir {
+  margin-left: 10px;
+  color: white;
+  background-color: red;
+}
+.btn-comprar {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, -1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+  transition: 0.4s;
+  margin-bottom: 20px;
+}
+.btn-comprar:hover {
+  background-color: #360202;
+  transition: 0.4s;
+  color: #fff;
+}
+.preco-botao{
+    display: flex;
+    flex-direction: row;
+    
+}

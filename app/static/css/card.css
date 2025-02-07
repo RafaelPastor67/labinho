@@ -1,0 +1,114 @@
+.banner {
+  width: auto;
+  color: white;
+  align-items: center;
+  text-align: center;
+  box-shadow: black;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  margin: 0;
+}
+
+p:last-of-type {
+  padding-bottom: 2rem;
+}
+
+.background {
+  height: auto;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* FLIP CARD */
+
+/* Estilo geral para o card */
+.flip-card {
+  width: 700px;
+  height: 400px;
+  perspective: 1000px; /* Cria a perspectiva 3D */
+  margin: 50px;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; /* Mantém os elementos dentro do card em 3D */
+  transition: transform 0.6s; /* Efeito de transição suave */
+}
+
+/* Efeito de flip */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); /* Gira o card ao passar o mouse */
+}
+
+/* Frente do card */
+.flip-card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Esconde o conteúdo da parte de trás */
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid rgba(216, 216, 216, 0.096) 3px;
+}
+
+.flip-card-front img {
+  width: 100px;
+  height: auto;
+}
+
+.flip-card-front h1{
+  margin: 10px;
+}
+
+/* Parte de trás do card */
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Esconde o conteúdo quando girado */
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  transform: rotateY(180deg); /* Gira a parte de trás inicialmente */
+  border: solid rgba(216, 216, 216, 0.096) 3px;
+}
+
+.flip-card-back .card-logo img {
+  width: 70px;
+  height: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.flip-card-back p {
+  font-size: 16px;
+  text-align: justify;
+}
+
+.contato {
+  display: flex;
+  flex-direction: row;
+  margin-left: 21%;
+}
+
+.tel-icon, .relogio-icon, .endereco-icon {
+  margin: 5px 0;
+}
+
+.telefones, .horas, .endereco p {
+  margin-left: 30px;
+}
+

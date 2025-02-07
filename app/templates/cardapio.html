@@ -1,0 +1,78 @@
+{% extends "card.html" %}
+{% block content %}
+
+<div class="background2">
+    <div class="aba-cardapio">
+        <button class="collapsible"><h2>Individuais</h2></button>
+        <div class="content">
+            <div class="boxes">
+                <div class="box1">
+                    <div class = "text">
+                        {% for prato in individuais %}
+                            <div class="for-prato" id="Individuais">
+                                {% include '_pratos.html' %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="cardapio-botao">
+                        <form action="{{ url_for('cardapioCompleto', tipo='Individual') }}" method="GET">
+                            <button type="submit">Ver mais</button>
+                        </form>
+                    </div> 
+                </div>
+                    
+            </div>
+        </div>
+    </div>
+    
+    <div class="aba-cardapio">
+            <button class="collapsible"><h2>Porções</h2></button>
+            <div class="content">
+                <div class="boxes">
+                    <div class="box1">
+                        <div class = "text">
+                            {% for prato in porcoes %}
+                                <div class="for-prato" id="Porção">
+                                    {% include '_pratos.html' %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="cardapio-botao">
+                            <form action="{{ url_for('cardapioCompleto', tipo='Porção') }}" method="GET">
+                                    <button type="submit">Ver mais</button>
+                                </form>
+                        </div> 
+                    </div>
+                        
+                </div>
+            </div>
+        </div>
+
+    <div class="aba-cardapio">
+        <button class="collapsible"><h2>Bebidas</h2></button>
+            <div class="content">
+                <div class="boxes">
+                    <div class="box1">
+                        <div class = "text">
+                            {% for prato in bebidas %}
+                                <div class="for-prato" id="Bebida">
+                                    {% include '_pratos.html' %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="cardapio-botao">
+                                <form action="{{ url_for('cardapioCompleto', tipo='Bebida') }}" method="GET">
+                                    <button type="submit">Ver mais</button>
+                                </form>
+                        </div> 
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% include "footer.html" %}
+
+{% endblock %}
+

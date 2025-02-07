@@ -1,0 +1,27 @@
+{% extends "card.html" %}
+{% block content %}
+
+<div class="background2" >
+    <div class="aba-cardapio">
+        <button class="collapsible"><h2>{{title}}</h2></button>
+        <div class="content">
+            <div class="boxes">
+                <div class="box1">
+                    <div class = "text">
+                        {% for prato in cardapio %}
+                            <div class="for-prato" id="{{title}}">
+                                {% include '_pratos.html' %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    {% include "footer.html" %}
+{% endblock %}

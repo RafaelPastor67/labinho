@@ -1,0 +1,57 @@
+
+<div class="background" id="content" style="background-image: url('{{ url_for('static', filename='imagens/' + fundo) }}');">
+
+    {% include "base.html" %}
+
+    <section class="center-content">
+        <div class="banner">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="image">
+                            <img class="logo-banner" src="{{ url_for('static', filename='imagens/labinho-ico-nobackground.png') }}" alt="logo La-Binho" id="menu">
+                        </div>
+                        <h1>{{pagina}}</h1>
+                        <p>{{texto}}</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="card-logo">
+                            <img src="{{ url_for('static', filename='imagens/labinho-ico-nobackground.png') }}" width="70px" alt="Logo-da-empresa" id="logo-binho-top">
+                        </div>
+
+                        <div class="contato">
+                            <div class="enderco-icon">
+                                <p><i class='bx bx-building-house'></i></p>
+                            </div>
+                            <div class="endereco">
+                                <p>Avenida Brasil, 840, Bairro Amazonas, Itabira, MG</p>
+                            </div>
+                        </div>
+
+                        <div class="contato">
+                            <div class="tel-icon">
+                                <p><i class='bx bx-phone'></i></p>
+                            </div>
+                            <div class="telefones">
+                                <p>(31) 3834-3668 / <strong>Pedidos</strong></p>
+                                <p>(31) 98814-0546 / <strong>Eventos</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="contato">
+                            <div class="relogio-icon">
+                                <p><i class='bx bx-time-five'></i></p>
+                            </div>
+                            <div class="horas">
+                                <p>Segunda a sábado - 18:00 às 23:00</p>
+                                <p>Domingos - 10h às 23h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    {% block content %}{% endblock %}

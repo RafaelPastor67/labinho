@@ -1,0 +1,82 @@
+<!doctype html>
+<head>
+    <title>{{ title }} - Labinho </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/card.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cardapio.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/carrinho.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registrar_prato.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css_mobile/footer_mobile.css') }}">
+    
+
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script defer src="{{ url_for('static', filename='javascript/base.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='javascript/cardapio.js') }}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="{{ url_for('static', filename='javascript/swiper.js') }}"></script>
+        
+    
+</head>
+<body>
+    <section class="navbar">
+        <div class="barra-links" id="seçao1">
+            <button class="btn-icon-header" id = "sidebar">
+                <i id="sidebar-button" class='bx bx-menu'></i>
+            </button>
+
+            <img src="{{ url_for('static', filename='imagens/labinho-ico-nobackground.png') }}" width="70px" alt="Logo-da-empresa" id="logo-binho-top">
+            
+            {% if user %}
+                <a href="{{ url_for('login') }}" class="btn-icon-header" id="icon-login">
+                    <i class='bx bx-log-in'></i>
+                </a>
+            {% endif %}
+
+            {% if not user %}
+            <a href="{{ url_for('login') }}" class="btn-icon-header" id="icon-login">
+                <i class='bx bx-user'></i>
+            </a>
+            {% endif %}
+
+        </div>
+
+        <div class="sidebar-hidden">
+            <div class="element-sidebar"><a href="{{ url_for('index')}}"><i class='bx bxs-home' ></i> Home</a> </div>
+            <div class="element-sidebar"><a href="{{ url_for('cardapio')}}"><i class='bx bxs-food-menu'></i> Menu </a></div>
+            <div class="element-sidebar"><a href="{{ url_for('carrinho')}}"><i class='bx bxs-cart'></i> Carrinho</a></div>
+            <div class="element-sidebar"><a href="{{ url_for('pag_eventos')}}"><i class='bx bxs-party' ></i> Eventos</a></div>
+            <div class="element-sidebar"><a href="{{ url_for('index') }}#contato"><i class='bx bxs-phone-call'></i> Contatos</a></div>
+            {% if user and user.cargo == 'Funcionário'%}
+                <div class="element-sidebar"><a href="{{ url_for('registroCardapio')}}"><i class='bx bxs-edit-alt'></i>Cadastro</a></div>
+            {% endif %}
+            {% if user and user.cargo == 'Gerente'%}
+                <div class="element-sidebar">
+                    <a href="#"><i class='bx bxs-edit-alt'></i>Cadastro</a>
+                    <ul class="submenu">
+                        <li><a href="{{ url_for('alterarCargo')}}"> Usuário</a></li>
+                        <li><a href="{{ url_for('registroCardapio')}}"> Produto</a></li>
+                    </ul>
+                </div>
+            {% endif %}
+            <div class="element-sidebar" id="some"><a href="{{ url_for('login')}}"><i class='bx bx-user' ></i> Login</a></div>
+        </div>     
+    </section>
+    
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+
+</body>
+</html>

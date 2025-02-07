@@ -1,0 +1,51 @@
+<div style="background-color:black">
+    {% include "base.html" %}
+</div>
+
+{% block content %}
+
+<section class="registro" >
+    <div class="wrapper">
+        <form action="" method="post">
+
+            <h1> Cadastro de prato </h1>
+
+            <div class="flashes-box">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <ul class=flashes>
+                            {% for message in messages %}
+                                <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %} 
+            </div>
+
+            <div class="input-box">
+                <label for="nome">Prato:</label>
+                <input type="text" name="nome" required>
+            </div>
+            <div class="input-box">
+                <label for="tipo">Tipo:</label>
+                <input type="text" name="tipo" required>
+            </div>
+            <div class="input-box">
+                <label for="valor">Valor:</label>
+                <input type="int" name="valor" required>
+            </div>
+            <div class="input-box">
+                <label for="descricao">Descrição:</label>
+                <input type="text" name="descricao" required>
+            </div>
+            <div class="input-box">
+                <label for="imagem">Imagem:</label>
+                <input type="imagem" name="imagem" required>
+            </div>
+            <div class="input-box">
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

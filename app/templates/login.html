@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css_mobile/login_mobile.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='imagens/labinho-favcon.png') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login </title>
+</head>
+
+{% block content %}
+
+
+<body style="background-image: url('{{ url_for('static', filename='imagens/Salão16.JPG') }}');" >
+    <header>
+        <div class="exit"><a href="{{ url_for('index')}}"><i class='bx bx-arrow-back'></i></a></div>
+    </header>
+    <h1 class="marca">La-Binho</h1>
+
+    <main>
+        <div class="wrapper">
+            <form action="" method="post">
+                <h1>Login</h1>
+
+                <div class="flashes-box">
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <ul class=flashes>
+                                {% for message in messages %}
+                                    <li>{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endwith %} 
+                </div>
+
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" name='password' placeholder="Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox"> 
+                        Lembrar de mim
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn">Login</button>
+                
+                <div class="register-link">
+                    <p>Novo usuário? <a href="{{ url_for('registro') }}">Clique aqui para registrar!</a></p>
+                </div>
+                
+            </form>
+        </div>
+    </main>
+</body>
+
+{% endblock %}
+
+
+</html>

@@ -1,0 +1,80 @@
+{% extends "card.html" %}
+
+{% block content %}
+
+    <body>
+        <main>
+            <div class="foto">
+                <img src="{{ url_for('static', filename='imagens/Salão16.JPG') }}" alt="Salão" class="e1" >
+                <div class="texto" id="salao">
+                    <h2>Salão</h2>
+                    <p>Nosso espaço presencial é <strong>bem espaçoso</strong>, oferecendo um ambiente <strong>muito acolhedor.</strong> Proporcionando conforto, o salão é perfeito para encontros íntimos e celebrações. Você encontrará mesas bem distribuídas e uma decoração sofisticada que cria a atmosfera ideal. <strong>Venha nos visitar</strong> e experimente o melhor da gastronomia em nosso restaurante.</p></div>
+            </div>
+            
+            <div class="foto-reverse">
+                <img src="{{ url_for ('static', filename='imagens/espaco-festas.jpg') }}" alt="salão de festas" class="e1">
+                <div class="texto">
+                    <h2>Eventos</h2>
+                    <p>Contamos com uma área reservada para eventos privados, ideal para aniversários, casamentos e eventos corporativos. <strong>Nossa equipe</strong> dedicada está pronta para tornar seu evento inesquecível, oferecendo um <strong>serviço personalizado e atencioso.</strong></p>
+                    <div class="foto-reverse-flex"><a href="{{ url_for('pag_eventos')}}" class="box-link">Saiba mais</a></div>    
+                </div>
+            </div>
+            
+            <div class="foto">
+                <img src="{{ url_for ('static', filename='imagens/golpe-do-motoboy-1200x900.jpg') }}" alt="Salão" class="e1">
+                <div class="texto">
+                    <h2>Delivery</h2>
+                    <p>Agora você pode desfrutar das nossas delícias <strong>sem sair de casa!</strong> Nosso serviço de <strong>delivery</strong> foi pensado para levar a qualidade e o sabor do nosso restaurante diretamente para o seu lar. Com um cardápio variado e pratos preparados com os melhores ingredientes, garantimos uma experiência gastronômica excepcional no <strong>conforto da sua casa.</strong></p></div>
+            </div>
+            <a href="{{ url_for('cardapio')}}"><button class="btn-ir-cardapio"><h1>Clique aqui para acessar nosso cardápio</h1></button></a>
+            </main>
+            <article>
+            
+            <h1>Informações de contato</h1>
+            
+            <div class="cont-contato" id="contato">
+                
+            
+                <div class="endereco-funcionamento">
+                    <div class="cont-endereco">
+                        <h2>Endereço</h2>
+                        <p>Avenida Brasil, 840<br>
+                            Bairro Amazonas<br>
+                            Itabira, MG<br>
+                            CEP: 35900-367</p>
+                    </div>
+            
+                    <div class="cont-horario">
+                        <h2>Horário de Funcionamento</h2>
+                        <h3>Atendimento Presencial</h3>
+                        <ul>
+                            <li><strong>Segunda a Sábado:</strong> 18:00 - 23:30</li>
+                            <li><strong>Domingo:</strong> 10:00 - 23:00</li> 
+                        </ul>
+            
+                        <h3>Delivery</h3>
+                        <ul>
+                            <li><strong>Segunda a Sábado:</strong> 18:00 - 23:30</li>
+                            <li><strong>Domingo:</strong> 10:00 - 15:15 | 18:00 - 23:00</li> 
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="cont-telefonebox">
+                    <div class="telefone">
+                        <h2>Telefones</h2>
+                        <h3>Pedidos</h3>
+                        <p>Telefone Fixo / Whatsapp: (31) 3834-3668</p>
+                        <h3>Eventos</h3>
+                        <p>Telefone Fixo / Whatsapp: (31) 98814-0546</p>
+                    </div>
+                </div>
+            
+            </div>  
+            </article>  
+        </main>
+    </body>
+
+{% include "footer.html" %}
+{% endblock %}
+

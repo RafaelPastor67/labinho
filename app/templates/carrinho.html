@@ -1,0 +1,33 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/carrinho.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css_mobile/carrinho_mobile.css') }}">
+</head>
+<div style="background-color:black">
+    {% include "base.html" %}
+</div>
+{% block content %}
+<div class="carrinho">
+    <h2> Carrinho </h2>
+
+    {% for carrinho, descricao, nome, imagem in carrinho %}
+        {% include '_produto.html' %}
+    {% endfor %}
+
+    {% if total !=  0%}
+        <div class="total">
+            <h3> Total: {{total}}</h3>
+            <form action="" method="POST">
+                <button type="submit" id='pedir'>Pedir</button>
+            </form>
+        </div>  
+        
+    {%endif%}
+
+    {% if total ==  0 %}
+        <h3> Carrinho vazio...</h3>
+        <h3>Acesse <a class="links-red" href="{{ url_for('cardapio')}}">cardapio</a> para fazer seu pedido </h3>
+    {%endif%}
+</div>
+{% include "footer.html" %}
+
+{% endblock %}

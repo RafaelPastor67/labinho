@@ -1,0 +1,23 @@
+@media (max-width: 768px) {
+    .flexfoot {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .social {
+        margin-bottom: 10px;
+    }
+
+    .flex-social {
+        display: flex;
+        justify-content: center;
+        gap: 10px; 
+    }
+
+    .btn-footer img {
+        width: 30px;
+    }
+
+    

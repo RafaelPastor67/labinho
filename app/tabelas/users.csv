@@ -1,0 +1,4 @@
+id,email,cargo,username,password,remember
+1,gerente@gmail.com,Gerente,gerente,gerente123,0
+2,teste123@gmail.com,Funcionário,funcionario,funcionario123,0
+3,cliente@gmail.com,Cliente,cliente,cliente123,0
