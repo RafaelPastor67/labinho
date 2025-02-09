@@ -185,3 +185,56 @@ article h1{
 .swiper-theme-color{
     background: #fff;
 }
+
+@media (max-width: 768px) {  
+                    /*Contato do index*/
+    .cont-contato {
+        flex-direction: column; 
+        align-items: flex-start; 
+        text-align: left; 
+    }
+
+    .endereco-funcionamento {
+        flex-direction: column; 
+        align-items: flex-start; 
+        border: none;
+        padding: 1rem 0; 
+    }
+
+    .cont-endereco,
+    .cont-horario,
+    .cont-telefonebox {
+        width: auto;
+        border: none; 
+        padding: 1rem 0; 
+    }
+
+                /*Main do index*/
+    .foto, .foto-reverse {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 5%;
+    }
+
+    
+    .foto .texto, .foto-reverse .texto {
+        
+        text-align: justify;
+        width: 100%; 
+        max-width: 600px; 
+        margin: 0 auto 1rem auto;
+    }
+
+    .e1 {
+        width: 100%;
+        max-width: 600px; 
+        margin-bottom: 1rem;
+    }
+
+    .foto-reverse-flex {
+        justify-content: center;
+    }
+
+}
+
+

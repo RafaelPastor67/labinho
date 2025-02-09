@@ -1,8 +1,8 @@
-footer{
+  footer{
     padding-top:30px;
     background-color: #151515;
     color: #a5a5a5;
-  }
+  } 
   .flexfoot{
     display: flex;
     margin:0%,4%,4%,0%;
@@ -77,3 +77,11 @@ footer{
         width: 30px;
     }
   }
+
+  /*:root{
+    --h1-primary: 16px;
+
+  }
+  h1{
+    font-size: var(--h1-primary);
+  }*/

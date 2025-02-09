@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/carrinho.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/registrar_prato.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css_mobile/footer_mobile.css') }}">
+    <link rel="stylesheet" href="mobile.css">
     
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script defer src="{{ url_for('static', filename='javascript/base.js') }}"></script>
@@ -22,9 +23,12 @@
     
 </head>
 <body>
+    <button class="btn-icon-header" id = "sidebar">
+        <i id="sidebar-button" class='bx bx-menu'></i>
+    </button>
     <section class="navbar">
         <div class="barra-links" id="seçao1">
-            <button class="btn-icon-header" id = "sidebar">
+            <button class="btn-icon-header" id = "b">
                 <i id="sidebar-button" class='bx bx-menu'></i>
             </button>
 
@@ -45,6 +49,9 @@
         </div>
 
         <div class="sidebar-hidden">
+            <button class="btn-icon-header" id = "a">
+                <i id="sidebar-button" class='bx bx-menu'></i>
+            </button>
             <div class="element-sidebar"><a href="{{ url_for('index')}}"><i class='bx bxs-home' ></i> Home</a> </div>
             <div class="element-sidebar"><a href="{{ url_for('cardapio')}}"><i class='bx bxs-food-menu'></i> Menu </a></div>
             <div class="element-sidebar"><a href="{{ url_for('carrinho')}}"><i class='bx bxs-cart'></i> Carrinho</a></div>

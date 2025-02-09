@@ -81,6 +81,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     padding: 20px;
+    
 }
 
 .cardapio-botao{
@@ -110,5 +111,106 @@
     transition: 1s;
     }
 .for-prato{
-    min-width: 90%;
+    min-height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Estilo para organizar os pratos em layout responsivo */
+.pratos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .prato-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .prato-imagem img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .info {
+    flex: 1;
+    text-align: left;
+    padding: 0 10px;
+  }
+  
+  .preco-botao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .buttons button {
+    width: auto;
+    padding: 8px 12px;
+    margin-top: 5px;
+  }
+  
+  @media  (max-width: 750px) {
+        /*aba cardapio*/
+
+    .text{
+        grid-template-columns: none;
+       
+    }
+    #individuais.for-prato{
+        flex-direction: row;
+        padding-bottom: 10%;
+    }
+
+    .background2{
+        padding: 3% 3%;
+    }
+    
+  }
+
+  @media screen and (min-width:751px) and (max-width: 1200px) {
+    /*aba cardapio*/
+
+.text{
+    grid-template-columns: none;
+   
+}
+#individuais.for-prato{
+    flex-direction: row;
+    padding-bottom: 2%;
+}
+
+.background2{
+    padding: 3% 15%;
+}
+
+}
+
+@media screen and (min-width:1200px) and (max-width: 1300px) {
+    /*aba cardapio*/
+
+
+#individuais.for-prato{
+    padding-bottom: 5%;
+}
+
+
+}
+@media (max-width: 800px) {
+    .for-prato{
+        min-width: 40vw;
+        flex-wrap: wrap;
+        margin-bottom: 1%;
+        justify-content: center;
+    }
 }

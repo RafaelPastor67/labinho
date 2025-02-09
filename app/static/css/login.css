@@ -27,8 +27,10 @@ body {
 }
 main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    width: 450px;
+    
 }
 .exit a{
   color:#fff;
@@ -45,14 +47,14 @@ main {
   transform: translate(-50%, -50%);
 }
 .wrapper {
-  width: 420px;
+  width: 100%;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: #fff;
   border-radius: 10px;
-  padding: 10px 40px 10px 40px;
+  padding: 10px 40px ;
 }
 
 .wrapper h1 {

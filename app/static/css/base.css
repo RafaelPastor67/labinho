@@ -10,9 +10,7 @@
 .navbar{
     height: 100px;
 }
-
 /* HEADER */
-
 .barra-links {
     color: transparent;
     display: flex;
@@ -32,10 +30,20 @@
     font-size: 50px;
     padding-top: 20px;
 }
-
 /* SIDEBAR */
+#sidebar{ /* Botão que puxa a sidebar, travei ele pra mexer com a tela */
+    position: fixed;
+    z-index: 100; /* Fica por cima de tudo */
+    left: 13%;
+    color: brown;
+}
 
-.sidebar-hidden {
+#a,#b{
+opacity: 0;
+cursor:default;
+}
+
+.sidebar-hidden { /*/sidebar escondida */
     position: absolute;
     display: flex;
     visibility: hidden;
@@ -51,10 +59,11 @@
     transition: left 1s;
     font-size: 20px;
     left: -20%; /* Esconde a sidebar fora da tela */
+    top: 0;
 }
 
 .sidebar-shown {
-    position: absolute;
+    position: fixed; /*Travei a sidebar pra mexer com a tela e nao ficar sobrando espaço*/
     display: flex;
     visibility: visible;
     width: auto;
@@ -70,6 +79,7 @@
     background-color: black;
     opacity: 0.6;
     z-index: 10;
+    top: 0;
 }
 
 .element-sidebar{
@@ -92,6 +102,7 @@
 }
 
 /* SUBMENU */
+
 .element-sidebar {
     position: relative;
 }

@@ -89,4 +89,11 @@ color:#5f0404;
         justify-content: left;
         gap: 0.5rem;
     }
+    .total{
+        text-align: center;
+        margin-right: 0;
+    }
+
+
+
 }
