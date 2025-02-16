@@ -209,6 +209,7 @@
 @media (max-width: 800px) {
     .for-prato{
         min-width: 40vw;
+        min-height: fit-content;
         flex-wrap: wrap;
         margin-bottom: 1%;
         justify-content: center;
